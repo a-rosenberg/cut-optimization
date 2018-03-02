@@ -82,6 +82,8 @@ class Packer(rectpack.PackerBBF):
             instructions.append('\tboard:\t\t\t%s' % str(result['board'] + 1))
             instructions.append('\tstart-width:\t%s' % str(result['x']))
             instructions.append('\tstart-height:\t%s' % str(result['y']))
+            instructions.append('\twidth:\t\t\t%s' % str(result['width']))
+            instructions.append('\theight:\t\t\t%s' % str(result['height']))
             instructions.append('')
 
         return '\n'.join(instructions)
@@ -144,7 +146,25 @@ def pack_test():
         {'width': 24, 'height': 38, 'rid': 'R4'},
         {'width': 44, 'height': 13, 'rid': 'L1'},
         {'width': 24, 'height': 38, 'rid': 'L3'},
-        {'width': 24, 'height': 78, 'rid': 'C1'}
+        {'width': 2.4, 'height': 34, 'rid': 'C1'},
+        {'width': 3.3, 'height': 7, 'rid': 'C2'},
+        {'width': 3.3, 'height': 7, 'rid': 'C3'},
+        {'width': 3.3, 'height': 7, 'rid': 'C4'},
+        {'width': 3.3, 'height': 7, 'rid': 'C5'},
+        {'width': 3.3, 'height': 12, 'rid': 'C6'},
+        {'width': 3.3, 'height': 26, 'rid': 'C7'},
+        {'width': 3.3, 'height': 34, 'rid': 'C8'},
+        {'width': 3.3, 'height': 7, 'rid': 'C9'},
+        {'width': 3.3, 'height': 2.3, 'rid': 'D8'},
+        {'width': 3.6, 'height': 66, 'rid': 'D9'},
+        {'width': 3.6, 'height': 66, 'rid': 'D9'},
+        {'width': 3.1, 'height': 3, 'rid': 'E8'},
+        {'width': 3.32, 'height': 27, 'rid': 'F8'},
+        {'width': 6, 'height': 10, 'rid': 'G8'},
+        {'width': 11, 'height': 22, 'rid': 'H8'},
+        {'width': 24, 'height': 24, 'rid': 'I8'},
+        {'width': 2, 'height': 31, 'rid': 'J8'},
+        {'width': 45, 'height': 7, 'rid': 'K8'},
     ]
     bins = [
         {'width': 48, 'height': 96},
