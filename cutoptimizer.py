@@ -110,7 +110,7 @@ class Packer(rectpack.PackerBBF):
         ax.set_xlim(0, x)
         ax.set_ylim(0, y)
 
-        ax.grid()
+        # ax.grid()
 
         for rect in board:
             ax.add_patch(
@@ -121,6 +121,10 @@ class Packer(rectpack.PackerBBF):
                     edgecolor='black'
                 )
             )
+
+            center_x = rect.x + 0.5 * rect.width
+            center_y = rect.y + 0.5 * rect.height
+            plt.text(center_x, center_y, rect.rid)
 
         fig.savefig(figure_path, dpi=90, bbox_inches='tight')
 
